@@ -1,82 +1,86 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #FAFAFA;
-  line-height: 1.6
-  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background: #2E8B57;
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-header{
-  background-color: #2E8B57;
-  text-align: center;
-  color: #F0F4F8;
-  padding: 30px 0
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
-#header-title {
-  font-size: 18px;
-  font-weight: normal;
+nav a:hover {
+    text-decoration: underline;
 }
 
-
-section {
-  padding: 40px 0;
-  background-color: #FAFAFA;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  margin-bottom: 1rem;
+.banner {
+    background: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
 }
 
-section:nth-child(even) {
-    background-color: #dbecf1;
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 22px;
-  color: #2c5282;
-  margin-bottom: 20px;
-  text-align: center;
+.section {
+    padding: 50px 0;
 }
 
-.content{
-  font-size: 16px;
-  padding: 20px;
-  margin-bottom: 1.2rem;
-  text-align: justify;
+.section.dark {
+    background: #2c5282;
+    color: white;
 }
 
-section ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 
-section li {
-  margin-bottom: 0.5rem;
+ul {
+    padding-left: 20px;
 }
 
-.cta-button {
+li {
+    margin-bottom: 10px;
+}
+
+.button {
   display: block;
   width: max-content;
   margin: 0 auto;
-  background-color: #00a8a8;
+  background-color: #2c5282;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
@@ -85,53 +89,31 @@ section li {
   transition: background-color 0.3s;
 }
 
-
-.cta-button:hover {
-  background-color: #028090;
+.button:hover {
+    background: #028090;
 }
-
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
+    padding: 20px 0;
 }
-
 
 @media (max-width: 768px) {
-  .container {
-    padding: 24px 0;
-  }
-  
-  section {
-    padding: 24px;
-    margin-bottom: 24px;
-  }
-  
-  .section-title {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
-    padding: 16px 0;
-  }
-  
-  section {
-    padding: 16px;
-  }
-  
-  .section-title {
-    font-size: 22px;
-  }
-  
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+    
+    .banner h1 {
+        font-size: 2em;
+    }
 }
